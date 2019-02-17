@@ -30,11 +30,22 @@ h1, h2, h3,h4,h5,h6 {
     margin: 32px 0;
     text-align: center;
 }
-.header__text img {
+.play-button {
+    width: 8%;
+    margin: 20px auto;
+    transition: 0.3s ease-out;
+}
+.play-button-bg {
+    fill: #8084a2 !important;
+}
+.play-button-bg:hover {
+    fill: #757cad !important;
+}
+/*.header__text img {
     width: 60px;
     padding: 15px;
     align-self: center;
-}
+}*/
 .button {
     color: #fff;
     background-color: #ff6d6d;
