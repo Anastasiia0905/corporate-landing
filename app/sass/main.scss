@@ -11,10 +11,10 @@ h1, h2, h3,h4,h5,h6 {
 }
 .header{
     margin: 0;
-    padding: 0;
-    height: 812px;
-    background-image: url("../../img/mountain.png");
-    background-repeat: no-repeat;
+    padding: 1em;
+    min-height: 120vh;
+    width: 100vw;
+    background-color: #ececec;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,17 +29,18 @@ h1, h2, h3,h4,h5,h6 {
 }
 .header__text h1 {
     font-weight: 100;
-    font-size: 67px;
+    font-size: 60px;
     margin: 32px 0;
     text-align: center;
 }
 .play-button {
-    width: 8%;
+    width: 35%;
     margin: 20px auto;
     transition: 0.3s ease-out;
 }
 .play-button-bg {
     fill: #8084a2 !important;
+
 }
 .play-button-bg:hover {
     fill: #757cad !important;
@@ -73,22 +74,28 @@ h1, h2, h3,h4,h5,h6 {
 
 
 .section2 {
-    height: 725px;
+    height: 100%;
+    width: 110vw;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative; 
 }
 .section2__description {
-    width: 50%;
-    padding: 150px; 
-    margin-top: 85px;
+    width: 90%; 
+    padding: 10px;  
 }
 .section2__img{
-    min-width: 39.5%;
+    min-width: 100%;// 39.5%
     height: 100%;
-    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;/// relative
     background-color: #ececec;
     overflow: hidden;
+    z-index: -1;
 }
 .section2__img::after{
     box-sizing: border-box;
@@ -293,4 +300,52 @@ h1, h2, h3,h4,h5,h6 {
     letter-spacing: 0.65px;
     padding-top: 20px;
     text-align: center;
+}
+
+.footer__container {
+    margin: 90px;
+}
+@media screen and (min-width: 480px){
+    .header{
+        padding: 0;
+        min-height: 100vh; //812px;
+        background-image: url("../../img/mountain.png");
+        background-size: cover; // none
+        background-repeat: no-repeat;
+    }
+    .header__text h1 {
+        font-size: 67px;
+        margin: 40px;
+    }
+    .play-button {
+        width: 8%;
+    }
+
+    .section2 {
+        width: 100vw;
+    }
+    .section2__description {
+        margin: 40px;
+    }
+
+}
+@media screen and (min-width: 991px){
+        .header {
+            min-height: 812px;
+        }
+        .header__text h1 {
+            margin: 32px 0;
+        }
+        .section2 {
+            height: 725px;
+        }
+        .section2__description {
+            width: 50%;
+            padding: 15px;
+        }
+        .section2__img{
+            min-width: 39.5%;
+            position: relative;
+            height: 100%;
+        }
 }
